@@ -1,0 +1,15 @@
+config:
+  target: "https://judge.me"
+  phases:
+    - duration: 30            # Test duration in seconds (30 sec as running in pipeline)
+      arrivalRate: 100         # Requests per second (100 RPS)
+  defaults:
+    headers:
+      Accept: "application/json"
+      Content-Type: "application/json"
+scenarios:
+  - flow:
+      - get:
+          url: "/search.json?q=&page=1&sort_by=reviews_count&category_id=207&country=ES&store_country=*&min_rating=0&min_transparency=80&min_authenticity=0&currency=BSD&reviews_count=0&category_search=true"
+          expect:
+            - statusCode: 200
