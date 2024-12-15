@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "artillery": "^2.0.21",
+    "axe-core": "^4.10.2"
+  }
+}
